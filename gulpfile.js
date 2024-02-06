@@ -41,7 +41,7 @@ const scss = () => {
     .pipe(sass())
     //.pipe(mediaqueries())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('.public/css/'))
+    .pipe(gulp.dest('./public/css/'))
 }
 
 
