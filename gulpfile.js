@@ -21,5 +21,5 @@ const img = () => {
 };
 
 
-export {html} ;
+
 export {img} ;
