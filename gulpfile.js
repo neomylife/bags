@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import fileinclude from "gulp-file-include";
 import webp from "gulp-webp";
+import htmlmin from "gulp-htmlmin";
 
 
 
@@ -11,6 +12,7 @@ import webp from "gulp-webp";
 const html = () => {
     return gulp.src('./src/html/*.html')
     .pipe(fileinclude())
+    .pipe(htmlmin({ collapseWhitespace: true }))
      .pipe(gulp.dest('./public'))
 };
 const img = () => {
@@ -21,5 +23,11 @@ const img = () => {
 };
 
 
+const watcher = () => {
+    gulp.watch('./src/html/**/*', html)
+};      
 
+
+export {html} ;
 export {img} ;
+export {watcher} ;
