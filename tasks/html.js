@@ -12,19 +12,15 @@ import webpHTML        from  "gulp-webp-html";
 import  path    from     '../config/path.js';
 
 const html = () => {
-    return gulp.src(path.html.src)
-    .pipe(changed('./public/'))
-    .pipe(plumber({
-        errorHandler: notify.onError({
-            title: "Styles",
-            message:"Error: <%= error.message %>",
-            sound: false
-            
-        })}))
-    .pipe(fileinclude())
-    .pipe(webpHTML())
-    .pipe(htmlmin({ collapseWhitespace: true }))
-     .pipe(gulp.dest(path.html.dest))
+
+
+    return gulp.src(['./src/html/**/*.html','!./src/html/blocks/**/*.html'])
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath:'@file'
+    }))
+    
+    .pipe(gulp.dest(path.html.dest))
 };
 
 export default html; 

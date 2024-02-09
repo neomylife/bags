@@ -10,23 +10,23 @@ import gulp from 'gulp';
 import  path    from     './config/path.js';
 
 
-import  html    from     './task/html.js';
-import  scss    from     './task/scss.js';
-import  js      from     './task/js.js';
-import  img     from     './task/img.js';
-import  fonts   from     './task/fonts.js';
-import  clean   from     './task/clean.js';
-import  server  from     './task/server.js';
+import  html    from     './tasks/html.js';
+import  scss    from     './tasks/scss.js';
+import  js      from     './tasks/js.js';
+import  img     from     './tasks/img.js';
+import  fonts   from     './tasks/fonts.js';
+import  clean   from     './tasks/clean.js';
+import  server  from     './tasks/server.js';
 
 
 
 
 
 const watcher = () => {
-    gulp.watch('./src/html/**/*', html);
-    gulp.watch('./src/scss/**/*', scss);
-    gulp.watch('./src/img/**/*', img);
-    gulp.watch('./src/js/**/*', js);
+    gulp.watch(path.html.watch, html);
+    gulp.watch(path.scss.watch, scss);
+    gulp.watch(path.img.watch,  img);
+    gulp.watch(path.js.watch,   js);
 };   
 
  const build = gulp.series(
@@ -49,7 +49,7 @@ export {build} ;
 
 export const dev = gulp.series(
     build,
-    gulp.parallel(server, watcher)
+    gulp.parallel( watcher, server)
     );
 
 
