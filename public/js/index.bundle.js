@@ -1,1 +1,7 @@
-"use strict";console.log(4);
+"use strict";
+
+!function () {
+  "use strict";
+
+  console.log(4);
+}();
