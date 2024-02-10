@@ -27,7 +27,7 @@ const html = () => {
 import sourcemaps      from  "gulp-sourcemaps";
 import sassGlob        from  "gulp-sass-glob";
 import concat          from  "gulp-concat";
-import webpCSS         from  "gulp-webp-css";
+import rename          from  "gulp-rename";
 
 import  dartSass       from 'sass';
 import  gulpSass       from 'gulp-sass';
@@ -41,6 +41,7 @@ const scss = () => {
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(concat("main.css"))
+    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dest/css"))
 }
