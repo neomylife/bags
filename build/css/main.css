@@ -1,5 +1,6 @@
 img {
   width: 100%;
+  padding: 2px;
 }
 
 .footer {
@@ -16,8 +17,8 @@ img {
   }
 }
 .header {
-  background-color: rgb(179, 179, 179);
-  padding: 0;
+  background-color: rgb(21, 38, 136);
+  padding: 18px;
   font-size: 39px;
   text-align: center;
 }
