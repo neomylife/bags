@@ -1,6 +1,3 @@
-/root/
-    .gitignore
-    /node_modules/  
-    /dest/
-    /build/
-        
+node_modules/
+dest/
+build/
