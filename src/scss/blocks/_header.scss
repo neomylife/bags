@@ -1,12 +1,27 @@
 .header{
-    background-color: rgb(21, 38, 136);
-    padding: 18px;
-    font-size: 39px;
-    text-align: center;
+   padding: 20px 0;
+    
 }
-
-@media(max-width: 1200px){
-    .header{
-        background-color: #6d6d6d;
+.menu{
+    display: flex;
+    &__link{
+        display: inline-block;
+        margin-right: 150px;
+        color: rgb(104, 104, 104);
+        
+        
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:550px;
+    }
+    &__list-link{
+        color: rgb(104, 104, 104);
+        &:hover{
+        color: #DFC68B;
+        
+        }
     }
 }

@@ -1,0 +1,48 @@
+.promo{
+
+    &__inner{
+        display: flex;
+    }
+    
+    &__wrap {
+        margin-top: 120px;
+        position: relative;
+       left: 80px;
+    }
+    &__wrap p{
+        font-weight: bold;
+        text-transform: uppercase;
+       
+    }
+    &__text-discount{
+        font-size: 100px;
+        width: 300px;
+        color: #DFC68B;
+        position: relative;
+        &::before{
+            content: "";
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            left: -50px;
+            background: url(../img/minus.png) no-repeat;
+        }
+
+    }
+    &__text-vitton{
+        font-size: 40px;
+        width: 300px;  
+        line-height: 1.2;
+        margin-top: 30px;
+    }
+    &__text-date{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    &__link{
+        font-size: 14px;
+
+    }
+}

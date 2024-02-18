@@ -1,0 +1,44 @@
+
+.novelties{
+    padding-top: 100px;
+    padding-bottom: 80px;
+    &__title{
+        @extend %h2;
+       
+    }
+    &__text{
+        @extend %h2_p;
+        margin-bottom: 30px;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        
+        &-item{
+           
+            width: 400px;
+            text-align: left;
+           
+        }
+        &-img{
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        &-title{
+            font-size: 20px;
+            margin: 0 auto;
+           
+           
+        }
+        &-text{
+           display: inline;
+         margin-bottom: 15px;
+        }
+    }
+    &__product-info{
+        width: 200px;
+        margin: 0 auto;
+       
+    }
+}

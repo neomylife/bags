@@ -1,13 +1,37 @@
 .footer{
-    background-color: rgb(134, 134, 134);
-    padding:  0;
-    font-size: 39px;
-    text-align: center;
-    color:#fff9f9;
-}
+    background-color:#F3F3F1;
+    margin-top: 80px;
 
-@media(max-width: 1200px){
-    .footer{
-        background-color: #979797;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+         padding: 60px 90px;
+         //border: 1px solid #000;
+    }
+
+    & h2{
+        margin-bottom: 20px;
+    }
+     & li{
+        color: #A8A8A8;
+        &:hover{
+            color: #000;
+        }
+    }
+
+
+    &__social-list{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    &__social-link{
+        display: block;
+        margin: 0 auto;
+         width: 150px;
+         padding: 7px 10px;
+        text-align: center;
     }
 }
+

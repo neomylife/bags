@@ -1,0 +1,15 @@
+
+.brands{
+    &__title{
+        @extend %h2;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box; 
+        padding: 10px;
+          
+    }
+
+}
